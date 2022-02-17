@@ -31,8 +31,14 @@ scrape_configs:
       module: [http_2xx]
     static_configs:
       - targets:
-        - https://beta.web.tella-app.org
         - https://wearehorizontal.org
+        - https://tella-app.org
+        - https://admin.tella-app.org
+        - https://collect.tella-app.org
+        - https://form.tella-app.org
+        - https://collect.essc.cleen.org
+        - https://form.essc.cleen.org
+        - https://admin.essc.cleen.org
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
