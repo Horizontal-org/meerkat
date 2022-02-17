@@ -31,8 +31,8 @@ scrape_configs:
       module: [http_2xx]
     static_configs:
       - targets:
-        - https://prometheus.io
-        - https://google.com 
+        - https://beta.web.tella-app.org
+        - https://wearehorizontal.org
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
