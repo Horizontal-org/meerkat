@@ -24,6 +24,7 @@ services:
     image: grafana/grafana-oss
     volumes:
       - ./grafana/storage:/var/lib/grafana
+      - ./grafana/grafana.ini:/etc/grafana/grafana.ini
     user: '0'
     networks: 
     - "metrics-network"
