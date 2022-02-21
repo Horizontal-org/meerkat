@@ -5,9 +5,9 @@ services:
   blackbox:
     image: prom/blackbox-exporter
     volumes:
-      - ./prometheus/exporters/blackbox/blackbox.yml:/etc/blackbox_exporter/config.yml
+      - ./exporters/blackbox/blackbox.yml:/etc/blackbox_exporter/config.yml
     networks: 
-        - "metrics-network"
+      - "metrics-network"
     expose: 
       - "9115"
 
@@ -16,7 +16,7 @@ services:
     volumes:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     networks: 
-        - "metrics-network"
+      - "metrics-network"
     expose: 
       - "9090"
 
@@ -26,8 +26,10 @@ services:
       - ./grafana/storage:/var/lib/grafana
       - ./grafana/grafana.ini:/etc/grafana/grafana.ini
     user: '0'
+    ports:
+        - "3000:3000"
     networks: 
-    - "metrics-network"
+      - "metrics-network"
     expose: 
       - "3000"
     environment:
