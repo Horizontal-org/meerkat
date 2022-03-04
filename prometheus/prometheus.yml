@@ -38,7 +38,7 @@ scrape_configs:
   - job_name: 'cadvisor_metrics'
     scrape_interval: 5s
     static_configs:
-      - targets: ['37.218.242.65:9100'] # mattermost chat 
+      - targets: ['37.218.242.65:9001'] # mattermost chat 
         labels:
           instance: 'chat.wearehorizontal.org'
 
