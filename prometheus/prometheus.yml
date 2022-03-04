@@ -38,9 +38,9 @@ scrape_configs:
   - job_name: 'cadvisor_metrics'
     scrape_interval: 5s
     static_configs:
-      - targets: ['37.218.244.11:9001'] # beta tellaweb
+      - targets: ['37.218.242.65:9100'] # mattermost chat 
         labels:
-          instance: 'beta.web.tella-app.org'
+          instance: 'chat.wearehorizontal.org'
 
   - job_name: blackbox # To get metrics about the exporter’s targets
     metrics_path: /probe
