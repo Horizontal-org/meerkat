@@ -48,9 +48,9 @@
     }
   },
   {
-    "targets": ["admin.essc.cleen.org:9100"],
+    "targets": ["213.108.105.50:9100"],
     "labels": {
-      "instance": "213.108.105.50"
+      "instance": "admin.essc.cleen.org"
     }
   } 
 ]
