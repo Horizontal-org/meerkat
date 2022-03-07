@@ -30,6 +30,7 @@ scrape_configs:
     file_sd_configs:
       - files:
         - node_targets.json
+        
   - job_name: 'cadvisor_metrics'
     scrape_interval: 5s
     static_configs:
