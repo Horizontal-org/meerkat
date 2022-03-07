@@ -14,31 +14,31 @@
   {
     "targets": ["192.0.78.133:9100"],
     "labels": {
-      "instance": "https://tella-app.org"      
+      "instance": "tella-app.org"      
     }
   },
   {
     "targets": ["213.108.105.40:9100"],
     "labels": {
-      "instance": "https://collect.tella-app.org"      
+      "instance": "collect.tella-app.org"      
     }
   }, 
   {
     "targets": ["213.108.105.40:9100"],
     "labels": {
-      "instance": "https://admin.tella-app.org"
+      "instance": "admin.tella-app.org"
     }
   },
   {
     "targets": ["213.108.105.40:9100"],
     "labels": {
-      "instance": "https://form.tella-app.org"
+      "instance": "form.tella-app.org"
     }
   },
   {
     "targets": ["213.108.105.50:9100"],
     "labels": {
-      "instance": "https://collect.essc.cleen.org"
+      "instance": "collect.essc.cleen.org"
     }
   },
   {
