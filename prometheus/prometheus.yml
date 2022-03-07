@@ -27,14 +27,9 @@ scrape_configs:
 
   - job_name: 'node_exporter_metrics'
     scrape_interval: 5s
-    static_configs:
-      - targets: ['37.218.244.11:9100'] # beta tellaweb
-        labels:
-          instance: 'beta.web.tella-app.org'
-      - targets: ['37.218.242.65:9100'] # mattermost chat 
-        labels:
-          instance: 'chat.wearehorizontal.org'
-
+    file_sd_configs:
+      - files:
+        - node_targets.json
   - job_name: 'cadvisor_metrics'
     scrape_interval: 5s
     static_configs:
@@ -46,16 +41,9 @@ scrape_configs:
     metrics_path: /probe
     params:
       module: [http_2xx]
-    static_configs:
-      - targets:
-        - https://wearehorizontal.org
-        - https://tella-app.org
-        - https://admin.tella-app.org
-        - https://collect.tella-app.org
-        - https://form.tella-app.org
-        - https://collect.essc.cleen.org
-        - https://form.essc.cleen.org
-        - https://admin.essc.cleen.org
+    file_sd_configs:
+      - files:
+        - blackbox_targets.json    
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
