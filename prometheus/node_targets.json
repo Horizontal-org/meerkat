@@ -26,7 +26,7 @@
   {
     "targets": ["213.108.105.40:9100"],
     "labels": {
-      "instance": "admin.tella-app.org"
+      "instance": "kobo.tella-app.org"
     }
   },
   {
