@@ -52,5 +52,11 @@
     "labels": {
       "instance": "admin.essc.cleen.org"
     }
-  } 
+  },
+  {
+    "targets": ["213.108.110.77:9100"],
+    "labels": {
+      "instance": "activistreport.org"
+    }
+  }
 ]
